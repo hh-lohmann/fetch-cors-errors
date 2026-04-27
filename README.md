@@ -7,11 +7,16 @@
 Note that the following just shortly clarifies what to be aware of, but does not offer a ready-to-use solution.
 
 
-## Node.js vs. Browsers
+## Node.js vs. browsers
 
 Node's "fetch" implementation [via undici](#node-fetch-based-on-undici) does explicitly [not implement CORS](#node-undici-no-cors) since it is targeting "server-side environments where CORS restrictions are typically unnecessary".
 
 This is a problem if you develop in a local Node.js environment without problems and the code crashes in browsers due to CORS.
+
+
+## Bun vs. browsers
+
+Bun does not state explicitly / officially that its "fetch" implementation does not check CORS, but in practice things are [like in Node](#nodejs-vs-browsers).
 
 
 ## Browsers: console vs. JavaScript
